@@ -12,6 +12,7 @@ const three = document.getElementById("three");
 const score1 = document.getElementById("score1");
 const score2 = document.getElementById("score2");
 const score3 = document.getElementById("score3");
+const click = new Audio('click.wav');
 
 let repeat;
 let timeLeft = 30;
@@ -66,6 +67,8 @@ function againfn()
 
 function ballfn()
 {
+click.currentTime = 0;
+click.play();
 frscore = frscore + 1;
 score.textContent = frscore;
 spawnball();
